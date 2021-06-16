@@ -37,7 +37,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1    | Web Server| 10.0.0.5   | Linux            |
 | Web-2    | Web Server| 10.0.0.6   | Linux            |
 | Web-3    | Web Server| 10.0.0.8   | Linux            |
-| ELK      | Web Server| 10.0.0.5   | Linux            |
+| ELK      | Web Server| 10.1.0.5   | Linux            |
 
 
 ### Access Policies

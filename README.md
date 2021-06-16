@@ -128,7 +128,7 @@ SSH into the control node and follow the steps below:
 - Edit the /etc/ansible/host file to add webserver/elkserver ip addresses
 - /etc/ansible/hosts
 
-_ Answer the following questions to fill in the blanks:_
+Answer the following questions to fill in the blanks:
 - Which file is the playbook? Where do you copy it?_
 - Which file do you update to make Ansible run the playbook on a specific machine? Hosts file.
 -  How do I specify which machine to install the ELK server on versus which to install Filebeat on? Add a group in the hosts file for the ELK machine(s) and include the IP address(es).

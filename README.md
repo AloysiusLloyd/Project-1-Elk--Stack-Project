@@ -53,13 +53,13 @@ Machines within the network can only be accessed by Jump Box.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes                 |  99.244.133.165      |
-| Web-1    | No                  |  10.0.0.5            |
-| Web-2    | No                  |  10.0.0.6            |
-| Web-3    | No                  |  10.0.0.8            |
-| ELK      |                     |  10.0.0.4,99.244.133.165|
+| Name     | Publicly Accessible | Allowed IP Addresses    |
+|----------|---------------------|-------------------------|
+| Jump Box | Yes                 |  99.244.133.165         |
+| Web-1    | No                  |  10.0.0.5               |
+| Web-2    | No                  |  10.0.0.6               |
+| Web-3    | No                  |  10.0.0.8               |
+| ELK      | No                  |  10.0.0.4,99.244.133.165|
 
 ### Elk Configuration
 

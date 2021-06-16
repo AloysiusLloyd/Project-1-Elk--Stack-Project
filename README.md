@@ -1,4 +1,3 @@
-# Project-1-Elk--Stack-Project
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -32,12 +31,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function  | IP Address | Operating System |
+|----------|-----------|------------|------------------|
+| Jump Box | Gateway   | 10.0.0.1   | Linux            |
+| Web-1    | Web Server| 10.0.0.5   | Linux            |
+| Web-2    | Web Server| 10.0.0.6   | Linux            |
+| Web-3    | Web Server| 10.0.0.8   | Linux            |
+| ELK      | Web Server| 10.0.0.5   | Linux            |
+
 
 ### Access Policies
 

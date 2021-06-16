@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ELK installation YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - /etc/ansible/install-elk.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -59,7 +59,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    | No                  |  10.0.0.4            |
 | Web-2    | No                  |  10.0.0.4            |
 | Web-3    | No                  |  10.0.0.4            |
-| ELK      |                     |  10.0.0.4            |
+| ELK      |                     |  10.0.0.4,99.244.133.165|
 
 ### Elk Configuration
 
@@ -68,9 +68,35 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - One main advantage would be YAML Playbooks. It is the best alternative for configuration management/automation.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+* Install docker.io
+	- name: Install docker.io
+			apt:
+ 			update_cache: yes
+ 			name: docker.io
+ 			state: present
+* Install Python-pip
+	- name: Install pip3
+			apt:
+ 			force_apt_get: yes
+ 			name: python3-pip
+ 			state: present
+* Install: docker
+	- name: Install Docker python module
+			pip:
+ 			name: docker
+ 			state: present
+* Command: sysctl -w vm.max_map_count=262144
+- Launch docker container: elk
+	- name: download and launch a docker elk container
+			docker_container:
+ 			name: elk
+ 			image: sebp/elk:761
+ 			state: started
+ 			restart_policy: always
+ 			published_ports:
+  			- 5601:5601
+  			- 9200:9200
+  			- 5044:5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
